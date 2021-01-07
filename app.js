@@ -32,6 +32,8 @@ const submitForm = (e) => {
     }
   });
 
+  document.querySelector('.error').style.display = 'none';
+
   if (
     firstname !== '' &&
     lastname !== '' &&
@@ -48,7 +50,7 @@ const submitForm = (e) => {
       top: 260,
       behavior: 'smooth',
     });
-    document.querySelector('.error').style.display = 'none';
+
     showError();
     setTimeout(() => {
       document.querySelector('.error').style.display = 'none';
