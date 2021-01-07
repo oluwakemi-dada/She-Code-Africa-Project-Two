@@ -7,22 +7,20 @@ const showError = () => {
         <p>Please fill all fields</p>
       </div>
     `;
-
   form.insertAdjacentHTML('beforebegin', errorBox);
+  clearAlert();
 };
 
-// CLEAR ALERT
+// Remove message
 const clearAlert = () => {
-  const currentAlert = document.querySelector('.error');
-  if (currentAlert) {
-    currentAlert.remove();
-  }
+  setTimeout(() => {
+    document.querySelector('.error').remove();
+  }, 3000);
 };
 
 // Form Submit
 const submitForm = (e) => {
   e.preventDefault();
-  clearAlert();
 
   // Form inputs
   const firstname = document.querySelector('.firstname').value;
@@ -58,11 +56,7 @@ const submitForm = (e) => {
       top: 260,
       behavior: 'smooth',
     });
-
     showError();
-    setTimeout(() => {
-      clearAlert();
-    }, 3000);
   }
 };
 
