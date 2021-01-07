@@ -266,9 +266,9 @@ img {
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 500px) {
   body {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
 
   .contact {
@@ -280,7 +280,7 @@ img {
   }
 
   .contact-form-fields h1 {
-    font-size: 2.5rem;
+    font-size: 2.3rem;
     font-weight: bold;
   }
 
