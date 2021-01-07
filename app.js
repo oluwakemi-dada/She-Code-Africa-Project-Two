@@ -3,7 +3,7 @@ const form = document.querySelector('.form');
 // Error Message
 const showError = () => {
   const errorBox = `
-      <div class='error'>
+      <div class='error alert'>
         <p>Please fill all fields</p>
       </div>
     `;
@@ -11,9 +11,18 @@ const showError = () => {
   form.insertAdjacentHTML('beforebegin', errorBox);
 };
 
+// CLEAR ALERT
+const clearAlert = () => {
+  const currentAlert = document.querySelector('.alert');
+  if (currentAlert) {
+    currentAlert.remove();
+  }
+};
+
 // Form Submit
 const submitForm = (e) => {
   e.preventDefault();
+
   // Form inputs
   const firstname = document.querySelector('.firstname').value;
   const lastname = document.querySelector('.lastname').value;
@@ -31,8 +40,6 @@ const submitForm = (e) => {
       selectedValue = rb.value;
     }
   });
-
-  document.querySelector('.error').style.display = 'none';
 
   if (
     firstname !== '' &&
@@ -53,7 +60,7 @@ const submitForm = (e) => {
 
     showError();
     setTimeout(() => {
-      document.querySelector('.error').style.display = 'none';
+      clearAlert();
     }, 3000);
   }
 };
