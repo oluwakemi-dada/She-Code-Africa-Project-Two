@@ -102,7 +102,8 @@ img {
   padding: 0.8rem 0;
 }
 
-.form > * input {
+.form > * input,
+.form > * textarea {
   padding: 1rem;
 }
 
