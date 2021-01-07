@@ -185,7 +185,7 @@ img {
   border-radius: 0.2rem;
 }
 
-/*  */
+/* Redirected page */
 #redirected-page {
   height: 100vh;
   display: flex;
@@ -267,12 +267,25 @@ img {
 }
 
 @media (max-width: 600px) {
+  body {
+    font-size: 1.5rem;
+  }
+
   .contact {
     margin: 10% 5%;
   }
 
   .contact-form-fields {
     padding: 3rem 2rem;
+  }
+
+  .contact-form-fields h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+
+  .form > * input {
+    padding: 0.8rem;
   }
 
   .message-grid label::after {
