@@ -22,6 +22,7 @@ const clearAlert = () => {
 // Form Submit
 const submitForm = (e) => {
   e.preventDefault();
+  clearAlert();
 
   // Form inputs
   const firstname = document.querySelector('.firstname').value;
