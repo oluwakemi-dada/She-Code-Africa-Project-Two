@@ -3,7 +3,7 @@ const form = document.querySelector('.form');
 // Error Message
 const showError = () => {
   const errorBox = `
-      <div class='error alert'>
+      <div class='error'>
         <p>Please fill all fields</p>
       </div>
     `;
@@ -13,7 +13,7 @@ const showError = () => {
 
 // CLEAR ALERT
 const clearAlert = () => {
-  const currentAlert = document.querySelector('.alert');
+  const currentAlert = document.querySelector('.error');
   if (currentAlert) {
     currentAlert.remove();
   }
